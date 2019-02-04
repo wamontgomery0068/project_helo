@@ -16,7 +16,7 @@ class Dashboard extends Component {
             <div className = "Dashboard_Container">
                 <div className = "Dashboard_Search">
                     <input className = "Search_Input" type = "text" placeholder = "Search by Title" />
-                    <button className = "Search_Button">
+                    <button className = "Search_Button" title = "Search">
                         <img className = "Search_Image" src = { Search } />
                     </button>
                     <button className = "Reset_Button">
