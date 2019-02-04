@@ -28,7 +28,17 @@ class Post extends Component {
                             <img className = "Post_Container_Bottom_Movie_Image" src = "https://pbs.twimg.com/media/DuJp0KRX4AETRg7.jpg:large"/>
                         </div>
                         <div className = "Post_Container_Bottom_Content">
-                            <p className = "Post_Container_Bottom_Content_Text"> Bumblebee' is certainly the best example of what this franchise is meant to be, and should it continue on this path, the Transformers can become exciting and enjoyable all over again. </p>
+                            <div className = "Post_Container_Bottom_Content_Paragraph">
+                                <p className = "Post_Container_Bottom_Content_Text"> Bumblebee' is certainly the best example of what this franchise is meant to be, and should it continue on this path, the Transformers can become exciting and enjoyable all over again. </p>
+                            </div>
+                            <div className = "Post_Container_Bottom_Content_Buttons">
+                                <button className = "Post_Container_Bottom_Edit_Button">
+                                    <p className = "Post_Container_Bottom_Button_Text"> Edit </p>
+                                </button>
+                                <button className = "Post_Container_Bottom_Submit_Button">
+                                    <p className = "Post_Container_Bottom_Button_Text"> Submit </p>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
