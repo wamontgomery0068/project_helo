@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
+import routes from './routes';
 import './App.css';
+
+
+
+
+// Imported Components Below before making a routes file
+
+import Nav from './component/Nav/Nav';
+// import Auth from './component/Auth/Auth';
+// import Dashboard from './component/Dashboard/Dashboard';
+// import Form from './component/Form/Form';
+// import Post from './component/Post/Post';
+
+// Imported Components Above before making a routes file
+
+// ****** Reminder ******
+// Import Nav
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className = "App_Container">
+          <Nav />
+          {routes}
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
 export default App;
+
