@@ -1,0 +1,147 @@
+.Auth_Container {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to right, #06acf5, #00bbf6, #00c9f0, #00d6e6, #00e1d8, #00e8cb, #00edb7, #1bf29f, #3bf487, #58f56a, #74f648, #8ff506);
+    /* border: 2px solid black; */
+    height: 106vh;
+    width: auto;
+    z-index: 1;
+    margin-top: -50%
+}
+
+.Auth_Card {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    
+    background-image: linear-gradient(to right, #06acf5, #00bbf6, #00c9f0, #00d6e6, #00e1d8, #00e8cb, #00edb7, #1bf29f, #3bf487, #58f56a, #74f648, #8ff506);
+    box-shadow: 0px 4px 15px black;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    height: 320px;
+    width: 400px;
+    margin-top: 2.5%
+}
+
+.Auth_Card_Logo {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    
+    /* border: 2px solid black; */
+    height: 80px;
+    width: 80px
+}
+
+.Logo_Image {
+    height: 80px;
+    width: 80px
+}
+
+.Auth_Card_Title {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 50px;
+    margin-top: 2%;
+}
+
+.Auth_Card_Title_Text {
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.Auth_Card_Field {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+    
+    /* border: 2px solid black; */
+    height: 80px;
+    width: 220px;
+    margin-top: 2%;
+}
+
+.Auth_Input_1 {
+    margin-left: 4%
+}
+
+.Auth_Input_2 {
+    margin-left: 5%
+}
+
+.Auth_Card_Field_Text {
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    color: white;
+}
+
+
+
+.Auth_Card_Buttons {
+    display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+    
+
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 220px;
+    margin-top: 1%;
+}
+
+.Auth_Card_Button_Login {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    
+    background-image: linear-gradient(to right top, #4a4a4a, #383838, #272727, #171717, #000000);
+    border: none;
+    height: 25px;
+    width: 40px;
+}
+
+.Auth_Card_Button_Register {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to right top, #4a4a4a, #383838, #272727, #171717, #000000);
+    border: none;
+    height: 25px;
+    width: 60px;
+}
+
+.Auth_Card_Button_Login_Text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11px;
+    color: white;
+    margin-top: 18%
+}
+
+.Auth_Card_Button_Register_Text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11px;
+    color: white;
+    margin-top: 11%
+}
+

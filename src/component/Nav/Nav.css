@@ -1,0 +1,110 @@
+.Nav_Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+    
+    /* border: 2px solid black; */
+    height: 100vh;
+    width: auto;
+    z-index: 10;
+}
+
+.Nav_Bar {
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+    
+    background-image: linear-gradient(to top, #06acf5, #00b5f5, #00bdf3, #00c5f1, #00cded, #00d4e9, #00dbe3, #00e1da, #00e8ca, #00eeb1, #13f291, #58f56a);
+    /* border: 2px solid black; */
+    box-shadow: 4px 0px 6px gray;
+    height: auto;
+    width: 70px;
+}
+
+.Nav_Picture {
+    background-color: white;
+    /* border: 2px solid black; */
+    border-radius: 35px;
+    box-shadow: 0px 0px 16px black;
+    height: 50px;
+    width: 50px;
+    margin-top: 10%
+}
+
+.Nav_Picture_Icon {
+    border-radius: 30px;
+    height: 44px;
+    width: 40px;
+    margin-top: 11%;
+    margin-left: 10%
+}
+
+.Nav_Username {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    height: 20px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.Nav_Username_Text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    color: white;
+}
+
+.Nav_Home {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+    background: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 8px;
+
+}
+
+.Nav_AddPage {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+    background: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 8px;
+}
+
+.Nav_LogOut {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+    background: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-top: 148px;
+}
+
+.Nav_Icons {
+    height: 21px;
+    width: 21px
+}

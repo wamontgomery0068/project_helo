@@ -1,0 +1,210 @@
+.Dashboard_Container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+    background-color: hsl(0, 0%, 95%);
+    height: 106vh;
+    width: auto;
+    z-index: 1;
+    margin-top: -50%
+}
+
+.Dashboard_Search {
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+    
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px black;
+    /* border: 2px solid black; */
+    height: 40px;
+    width: 500px;
+    margin-top: 5%;
+    margin-left: 7%
+}
+
+.Search_Input {
+    border: 1px solid lightgray;
+    /* box-shadow: 0px 0.5px 0.5px black; */
+    /* border-radius: 2px; */
+    height: 12px;
+    width: 280px;
+    margin-left: 2%;
+
+    font-size: 8px
+
+}
+
+.Search_Button {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to right, #06acf5, #00bbf6, #00c9f0, #00d6e6, #00e1d8, #00e8cb, #00edb7, #1bf29f, #3bf487, #58f56a, #74f648, #8ff506);
+    /* border: 1px solid lightgray; */
+    /* box-shadow: 0px 1px 1px black; */
+    border: none;
+    border-radius: 2px;
+    height: 16px;
+    width: 16px;
+}
+
+.Search_Image {
+    height: 12px;
+    width: 12px;
+    
+}
+
+.Reset_Button {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    
+    background-image: linear-gradient(to right top, #4a4a4a, #383838, #272727, #171717, #000000);
+    border: none;
+    box-shadow: 0px 1px 1px lightgray;
+    border-radius: 1px;
+    height: 16px;
+    width: 27px;
+}
+
+.Reset_Text {
+    color: white;
+    margin-top: 15%;
+    font-size: 7.5px
+}
+
+.My_Post {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    height: 15px;
+    width: 35px;
+    margin-left: 21.8%
+}
+
+.My_Post_Text {
+    font-size: 8px;
+    color: black;
+    font-weight: bold;
+}
+
+.Input_Checkbox {
+    border: 2px solid black;
+    height: 9px;
+    width: 9px;
+    margin-top: 1.6%
+
+}
+
+.Dashboard_Entry {
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+    
+    background-color: white;
+    box-shadow: 0px 1px 2px black;
+    border-radius: 2px;
+    /* border: 2px solid black; */
+    height: 180px;
+    width: 500px;
+    margin-top: 1%;
+    margin-left: 7%
+}
+
+.Data_Entry {
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+    
+    /* border: 1px solid black; */
+    box-shadow: 0px 1px 2px black;
+    border-radius: 2px;
+    height: 40px;
+    width: 480px;
+    margin: 2%
+}
+
+.Data_Name {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    height: 20px;
+    width: 40px;
+}
+
+.Data_Name_Text {
+    font-size: 12px;
+    color: gray;
+    margin-left: 10%
+}
+
+.Data_Author {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+    height: 20px;
+    width: 60px;
+    margin-left: 70%
+}
+
+.Data_Author_Text {
+    font-size: 8px;
+    color: gray;
+}
+
+.Data_Profile_Image {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    box-shadow:  0px 0px 1px 1px grey;
+    height: 28px;
+    width: 28px;
+    /* margin-left: 5% */
+}
+
+.Profile_Image {
+    border-radius: 25px;
+    height: 28px;
+    width: 28px;
+}
+
+.Data_Profile_Trash {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid black; */
+    border: none;
+    background: none;
+    height: 15px;
+    width: 15px;
+    margin-top: 5%
+}
+
+.Profile_Trash_Image {
+    height: 10px;
+    width: 10px;
+}
