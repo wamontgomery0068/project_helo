@@ -1,17 +1,28 @@
 import axios from "axios";
 
 const initialState = {
-    information: []
+    information: [],
+    user: {},
+    error: ""
 };
 
 // Action Types
-const Get_Information = "Information_Data"
+const Get_Information = "Information_Data";
+const LOGIN = "LOGIN";
 
 // Get_Information Action Creator
-export function information(){
+export function getInformation(){
     return{
         type: Get_Information,
         payload: axios.get("/information/all")
+    };
+};
+
+// Login Action Creator
+export function login(username, password){
+    return{
+        type: LOGIN,
+        payload: axios.post("/auth/login", { username: username, password })
     };
 };
 
