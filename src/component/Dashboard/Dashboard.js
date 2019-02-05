@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
-import {getInformation} from "../../ducks/reducer";
+// import { connect } from 'react-redux';
+// import {getInformation} from "../../ducks/reducer";
+import axios from "axios";
 import './Dashboard.css'
 
 import Search from "../../Images/search.png";
@@ -10,29 +11,39 @@ class Dashboard extends Component {
     constructor(){
         super();
 
-        this.state = {};
+        this.state = {
+            posts: []
+        };
     };
 
-    componentDidMount(){
-        this.props.getInformation()
+    componentDidMount = () => {
+        axios.get("/information/all").then(response => {
+            this.setState({posts: response.data})
+        })
     }
 
     render() {
-        let DisplayInformation = this.props.information.map(information => {
-            // console.log(information)
+        const posts = this.state.posts.map(information => {
             return(
                 <div className = "Data_Entry">
                     <div className = "Data_Name">
-                        <p className = "Data_Name_Text"> Movies </p>
+                        <p className = "Data_Name_Text"> {information.title} </p>
                     </div>
                     <div className = "Data_Author">
-                        <p className = "Data_Author_Text"> by: R2-D2 </p>
+                        <p className = "Data_Author_Text"> by: {information.username} </p>
                     </div>
                     <div className = "Data_Profile_Image">
-                        <img className = "Profile_Image" src = "http://www.fubiz.net/wp-content/uploads/2015/12/starwarsicons-14-900x872.jpg" />
+                        <img className = "Profile_Image" src = {information.profile_image} />
                     </div>
-                    <button className = "Data_Profile_Trash" title = "Delete">
+
+                    <button 
+
+                        className  = "Data_Profile_Trash" 
+                        title = "Delete" 
+                        onClick ={() => {this.props.deleteInformation()}}
+                    >
                         <img className = "Profile_Trash_Image" src = {Trash} />
+
                     </button>
                 </div>
             )
@@ -53,7 +64,7 @@ class Dashboard extends Component {
                     <input className = "Input_Checkbox" type = "Checkbox" />
                 </div>
                 <div className = "Dashboard_Entry">
-                   {DisplayInformation}
+                   {posts}
                 </div>
     
             </div>
@@ -61,10 +72,12 @@ class Dashboard extends Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    return {
-        reducer: state.information
-    };
-};
+// const mapStateToProps = (state) => {
+//     return {
+//         reducer: state.information
+//     };
+// };
 
-export default connect(mapStateToProps, {getInformation: getInformation}) (Dashboard);
+// export default connect(mapStateToProps, {getInformation: getInformation}) (Dashboard);
+
+export default Dashboard;

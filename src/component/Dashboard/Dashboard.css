@@ -143,12 +143,12 @@
     align-items: center;
     
     /* border: 2px solid black; */
-    height: 20px;
+    height: 30px;
     width: 40px;
 }
 
 .Data_Name_Text {
-    font-size: 12px;
+    font-size: 11px;
     color: gray;
     margin-left: 10%
 }
