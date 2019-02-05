@@ -1,0 +1,1 @@
+DELETE FROM helo_information WHERE id=$1
