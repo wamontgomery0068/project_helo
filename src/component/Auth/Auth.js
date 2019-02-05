@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import {Redirect} from "react-router-dom";
 import './Auth.css';
 import Wink from "../../Images/winkface.png";
+import axios from "axios";
 
 // Imports from the Ducks Folder Below
 
@@ -20,28 +21,29 @@ class Auth extends Component {
             password: ""
         };
         this.handleChange = this.handleChange.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
-        this.handleRegister = this.handleRegister.bind(this);
     };
 
     handleChange(e){
         this.setState({ [e.target.name]: e.target.value})
     };
 
-    handleLogin(e){
-        e.preventDefault();
-        this.props.login(this.state.username, this.state.password)
+    handleLogin = () => {
+        const { username, password } = this.state;
+        axios.post(`/auth/login`, { username, password }).then(response => {
+            // console.log(response)
+            this.props.history.push("/dashboard")
+        });
     };
 
-    handleRegister(e){
-        e.preventDefault();
-        this.props.Register(this.state.username, this.state.password)
+    handleRegister = () => {
+        const { username, password } = this.state;
+        axios.post(`/auth/register`, { username, password }).then(response => {
+            // console.log(response)
+            this.props.history.push("/dashboard")
+        });
     };
 
     render() {
-        // if (this.props.reducer.username){
-        //     return <Redirect to = '/dashboard' />
-        // };
         return (
             <div className = "Auth_Container">
                 <div className = "Auth_Card">
