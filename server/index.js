@@ -32,7 +32,8 @@ app.get("/auth/user", ac.user);
 
 // Information
 
-app.get("/information/all", mc.getInformation)
+app.get("/information/all", mc.getInformation);
+app.delete("/information/deleteInformation/:id", mc.deleteInformation);
 
 
 app.listen(process.env.EXPRESS_PORT || 3056, () => {
