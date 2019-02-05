@@ -47,9 +47,10 @@ export function getUser(){
 
 // DELETE_INFORMATION Action Creator
 export function deleteInformation(id){
+    console.log(id)
     return{
         type: DELETE_INFORMATION,
-        payload: axios.delete(`"/information/deleteInformation/${id}`)
+        payload: axios.delete(`/information/deleteInformation/${id}`)
     };
 };
 

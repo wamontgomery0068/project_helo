@@ -15,7 +15,13 @@ const login = (req, res) => {
                 res.status(401).json({error: "Incorrect password"});
             }
         }
+        // console.log(req.session.user.username)
     });
+};
+
+const logout = (req, res) => {
+    req.session.destroy();
+    return res.status(200).send('You are Logged out')
 };
 
 const register = async (req, res) => {
@@ -36,8 +42,8 @@ const register = async (req, res) => {
 };
 
 const user = (req, res) => {
+    console.log(req.session.user)
     if(req.session.user){
-        console.log(user)
         res.json(req.session.user)
     } else {
         res.status(401).json({error: "Please login"})
@@ -46,6 +52,7 @@ const user = (req, res) => {
 
 module.exports = {
     login,
+    logout,
     register,
     user
 }

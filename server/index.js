@@ -27,6 +27,7 @@ massive(process.env.CONNECTION_STRING).then(db => {
 // User Section
 
 app.post("/auth/login", ac.login);
+app.post("auth/logout", ac.logout)
 app.post("/auth/register", ac.register);
 app.get("/auth/user", ac.user);
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import { connect } from 'react-redux';
-// import {getInformation} from "../../ducks/reducer";
+import { connect } from 'react-redux';
+import { deleteInformation} from '../../ducks/reducer';
 import axios from "axios";
 import './Dashboard.css'
 
@@ -22,6 +22,12 @@ class Dashboard extends Component {
         })
     }
 
+    // componentDidUpdate(prevState){
+    //     if(prevState.posts.length !== this.state.length)
+    // }
+
+    
+
     render() {
         const posts = this.state.posts.map(information => {
             return(
@@ -40,7 +46,7 @@ class Dashboard extends Component {
 
                         className  = "Data_Profile_Trash" 
                         title = "Delete" 
-                        onClick ={() => {this.props.deleteInformation()}}
+                        onClick ={() => {this.props.deleteInformation(information.id)}}
                     >
                         <img className = "Profile_Trash_Image" src = {Trash} />
 
@@ -72,12 +78,11 @@ class Dashboard extends Component {
     }
 };
 
-// const mapStateToProps = (state) => {
-//     return {
-//         reducer: state.information
-//     };
-// };
+const mapStateToProps = (state) => {
+    return {
+        reducer: state.information
+    };
+};
 
-// export default connect(mapStateToProps, {getInformation: getInformation}) (Dashboard);
+export default connect(mapStateToProps, {deleteInformation: deleteInformation}) (Dashboard);
 
-export default Dashboard;

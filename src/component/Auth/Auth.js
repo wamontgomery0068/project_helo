@@ -7,8 +7,6 @@ import axios from "axios";
 
 // Imports from the Ducks Folder Below
 
-// import {login} from '../../ducks/reducer';
-// import {register} from '../../ducks/reducer';
 
 // Imports from the Ducks Folder Above
 
