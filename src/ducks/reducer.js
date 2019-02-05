@@ -11,6 +11,7 @@ const Get_Information = "Information_Data";
 const LOGIN = "LOGIN";
 const REGISTER = "REGISTER";
 const GET_USER = "GET_USER";
+const DELETE_INFORMATION = "DELETE_INFORMATION";
 
 // Get_Information Action Creator
 export function getInformation(){
@@ -44,6 +45,14 @@ export function getUser(){
     };
 };
 
+// DELETE_INFORMATION Action Creator
+export function deleteInformation(id){
+    return{
+        type: DELETE_INFORMATION,
+        payload: axios.delete(`"/information/deleteInformation/${id}`)
+    };
+};
+
 // Reducer Function
 export default function reducer(state = initialState, action){
     switch (action.type){
@@ -59,6 +68,10 @@ export default function reducer(state = initialState, action){
             return { ...state, error: "Bad Register" };
         case GET_USER + "_FULFILLED":
             return { ...state, user: action.payload.data };
+        case DELETE_INFORMATION + "_FULLFILLED":
+            return { ...state, information: action.payload.data};
+        case DELETE_INFORMATION + "_PENDING":
+            return { ...state};
         default:
             return state;
     };
