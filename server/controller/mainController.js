@@ -7,6 +7,15 @@ function getInformation(req, res){
     .catch(err => console.log(err))
 }
 
+function deleteInformation(req, res){
+    const db = req.app.get('db')
+    console.log(+req.params.id)
+    db.delete_information(+req.params.id)
+    .then(response => res.json(response))
+    .catch(error_in_backend => console.log(error_in_backend))
+};
+
 module.exports = {
-    getInformation
+    getInformation,
+    deleteInformation
 }
