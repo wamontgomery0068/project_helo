@@ -35,6 +35,7 @@ app.get("/auth/user", ac.user);
 
 app.get("/information/all", mc.getInformation);
 app.delete("/information/deleteInformation/:id", mc.deleteInformation);
+app.post("/information/addPost", mc.addPost);
 
 
 app.listen(process.env.EXPRESS_PORT || 3056, () => {
