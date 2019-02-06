@@ -12,6 +12,7 @@ const LOGIN = "LOGIN";
 const REGISTER = "REGISTER";
 const GET_USER = "GET_USER";
 const DELETE_INFORMATION = "DELETE_INFORMATION";
+const ADD_POST = "ADD_POST";
 
 // Get_Information Action Creator
 export function getInformation(){
@@ -54,11 +55,21 @@ export function deleteInformation(id){
     };
 };
 
+// ADD_POST Action Creator
+export function addPost(title, image_url, content){
+    return{
+        type: ADD_POST,
+        payload: axios.post(`/information/addPost`, {
+            title,
+            image_url,
+            content
+        })
+    }
+}
+
 // Reducer Function
 export default function reducer(state = initialState, action){
     switch (action.type){
-        case Get_Information + "_FULFILLED":
-            return { ...state, user:action.payload.data};
         case LOGIN + "_FULFILLED":
             return { ...state, user: action.payload.data };
         case LOGIN + "_REJECTED":
@@ -73,6 +84,10 @@ export default function reducer(state = initialState, action){
             return { ...state, information: action.payload.data};
         case DELETE_INFORMATION + "_PENDING":
             return { ...state};
+        case ADD_POST + "_FULLFILLED":
+            return { ...state, user: action.payload.data};
+        case ADD_POST + "_REJECTED":
+            return { ...state, error: "Couldn't Post" };
         default:
             return state;
     };
