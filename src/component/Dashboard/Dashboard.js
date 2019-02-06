@@ -22,11 +22,14 @@ class Dashboard extends Component {
         })
     }
 
-    // componentDidUpdate(prevState){
-    //     if(prevState.posts.length !== this.state.length)
-    // }
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.posts !== this.state.posts)
+        console.log(`Update ${this.state.posts}`);
+        return({information: this.state.props}).then(response => {
+            this.setState({isLoading:false, geographicState: response})
+        });
+    };
 
-    
 
     render() {
         const posts = this.state.posts.map(information => {
